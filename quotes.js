@@ -3,7 +3,7 @@ function random(array) {
 }
 
 var xmlhttp = new XMLHttpRequest();
-var url = "quotes.json";
+var url = "./quotes.json";
 
 xmlhttp.onreadystatechange = function() {
     if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
@@ -16,8 +16,10 @@ xmlhttp.send();
 
 function jsonLoaded(arr) {
 	var randomItem = random(arr.lines);
+	var isDarkMode = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+
 	document.getElementById('line').innerHTML = randomItem.text ;
 	document.getElementById('author').innerHTML = '- ' + randomItem.author;
-	document.body.style.backgroundColor = random(arr.colors);
+	document.body.style.backgroundColor = random(isDarkMode ? arr.colorsDarkMode :arr.colors  );
 
 }

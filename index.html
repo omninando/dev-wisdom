@@ -18,8 +18,8 @@
 		dl, dt, dd, ol, ul, li,
 		fieldset, form, label, legend,
 		table, caption, tbody, tfoot, thead, tr, th, td,
-		article, aside, canvas, details, embed, 
-		figure, figcaption, footer, header, hgroup, 
+		article, aside, canvas, details, embed,
+		figure, figcaption, footer, header, hgroup,
 		menu, nav, output, ruby, section, summary,
 		time, mark, audio, video {
 			margin: 0;
@@ -30,7 +30,7 @@
 			vertical-align: baseline;
 		}
 		/* HTML5 display-role reset for older browsers */
-		article, aside, details, figcaption, figure, 
+		article, aside, details, figcaption, figure,
 		footer, header, hgroup, menu, nav, section {
 			display: block;
 		}
@@ -104,6 +104,16 @@
 			padding: 0;
 			line-height: .6;
 		}
+
+		@media (prefers-color-scheme: dark) {
+			body {
+				border: 10px solid #D4D5D4;
+			}
+			h1, h2, #quote {
+				color: #D4D5D4;
+			}
+		}
+
 	</style>
 </head>
 <body>
@@ -112,4 +122,4 @@
 	<h2 id="author"></h2>
 	<script type="text/javascript" src="quotes.js"></script>
 </body>
-</html> 
+</html>
